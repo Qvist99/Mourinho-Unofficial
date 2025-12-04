@@ -1,10 +1,11 @@
 import PressTextContent from "./PressTextContent"
 import PressList from "./PressList"
+import Section from "../Section"
 export default function PressSection() {
     return (
-        <section id="press" className="px-80 py-20 text-black min-h-[450px]">
+        <Section id="press" className="text-black min-h-[450px]">
             <PressTextContent />
             <PressList />
-        </section>
+        </Section>
     )
 }

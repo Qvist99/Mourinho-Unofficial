@@ -1,13 +1,23 @@
 import Quote from "./Quote"
 import TrophyDisplay from "./TrophyDisplay"
+import Section from "../Section"
 export default function TitlesSection() {
     return (
-        <section
+        <Section
             id="titles"
-            className="min-h-[700px] bg-[#2A2A2A] px-80 flex justify-between py-20 items-center "
+            className="
+            min-h-[700px] 
+            bg-[#2A2A2A] 
+            flex
+            flex-col
+            sm:flex-row
+            justify-between 
+            items-center
+            gap-12
+            "
         >
             <Quote />
             <TrophyDisplay />
-        </section>
+        </Section>
     )
 }

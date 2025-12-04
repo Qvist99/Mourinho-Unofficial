@@ -2,7 +2,7 @@
 export default function PressTextContent() {
     return (
         <div>
-            <h1 className="text-6xl">PRESS</h1>
+            <h1 className=" text-4xl xl:text-6xl">PRESS</h1>
         </div>
     )
 }

@@ -3,6 +3,7 @@ import Link from "next/link"
 import LanguageSelector from "./LanguageSelector"
 
 import { useState, useEffect } from "react"
+import Section from "../Section"
 
 export default function Navbar() {
 
@@ -25,8 +26,8 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className={`
-                px-10 py-4 flex justify-between items-center bg-linear-to-b from-[rgba(0,0,0,0.23)] to-[rgba(0,0,0,0)] w-full z-50
+        <Section variant="shell" className={`
+                flex justify-between items-center bg-linear-to-b from-[rgba(0,0,0,0.23)] to-[rgba(0,0,0,0)] w-full z-50
                 transition-all duration-300
                 ${isSticky ? "fixed top-0" : "absolute top-0"}
             `}
@@ -40,6 +41,6 @@ export default function Navbar() {
             <div>
                 <LanguageSelector />
             </div>
-        </nav>
+        </Section>
     )
 }

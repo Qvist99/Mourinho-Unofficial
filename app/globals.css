@@ -20,6 +20,38 @@ body {
 }
 
 
+@layer utilities {
+  .px-section {
+    @apply px-6 sm:px-10 md:px-20 lg:px-40 xl:px-80;
+  }
+  .py-section {
+    @apply py-20
+  }
+
+  .px-hero{
+    @apply px-0
+  }
+
+  .py-hero{
+    @apply py-0
+  }
+
+  .px-shell{
+    @apply px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10;
+  }
+
+  .py-shell{
+    @apply py-4
+  } 
+
+}
+
+
+
+
+
+
+
 /* Benfica color hexes */
 /* 
   Yellow: #FFD400

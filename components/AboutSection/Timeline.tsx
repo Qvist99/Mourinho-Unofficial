@@ -3,11 +3,17 @@
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { useState } from "react"
 import { timelineItems } from "@/lib/timelineItems"
-
+import { useWindowWidth } from "@/lib/useWindowWidth"
 
 export default function Timeline() {
+    const width = useWindowWidth();
+
+    const itemsPerView = width && width < 640 ? 1 : width && width < 768 ? 2 : width && width < 1024 ? 3 : 4;
+
+    const slideWidth = 100 / itemsPerView;
+
     // Maximum timeline items shown at once
-    const maxIndex = timelineItems.length - 4;
+    const maxIndex = timelineItems.length - itemsPerView;
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -42,10 +48,11 @@ export default function Timeline() {
                 </button>
             </div>
 
-            <div className="flex overflow-y-visible transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 25}%)` }}>
+            <div className="flex overflow-y-visible transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * slideWidth}%)` }}>
                 {timelineItems.map((item, index) => (
 
-                    <div key={index} className="group flex-[0_0_calc(100%/4)] max-w-[calc(100%/4)]  flex flex-col items-center">
+                    <div key={index} className={`group flex flex-col items-center`} style={{ flex: `0 0 calc(100% / ${itemsPerView})`, maxWidth: `calc(100% / ${itemsPerView})` }}
+                    >
 
                         {/* Time frame text */}
                         <span className="mb-6 text-center font-semibold text-sm">

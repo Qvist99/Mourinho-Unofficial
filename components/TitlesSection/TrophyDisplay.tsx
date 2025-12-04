@@ -37,7 +37,14 @@ export default function TrophyDisplay() {
 
 
     return (
-        <div className="flex flex-col items-start gap-5 w-1/3">
+        <div className="
+        flex 
+        flex-col 
+        items-start 
+        gap-5 
+        sm:w-1/3
+        "
+        >
 
             {trophies.map((trophy, index) => (
                 <TrophyItem key={index} text={trophy.text}>

@@ -33,7 +33,13 @@ export default function PressList() {
                 />
             ))}
 
-            <div className="flex gap-2 mt-6">
+            <div className="
+                flex
+                justify-between
+                sm:justify-start
+                sm:gap-2 
+                mt-6
+            ">
                 <button className="bg-[#efedea] py-2 px-4 font-bold rounded-md cursor-pointer hover:bg-[#ed1c24] hover:text-white transition-all duration-300">Load More</button>
                 <button className="bg-[#efedea] py-2 px-4 font-bold rounded-md cursor-pointer hover:bg-[#ed1c24] hover:text-white transition-all duration-300">View All</button>
             </div>

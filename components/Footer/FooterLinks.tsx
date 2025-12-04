@@ -1,7 +1,7 @@
 
 export default function FooterLinks() {
     return (
-        <div className="flex gap-2">
+        <div className="flex gap-4 sm:gap-2 text-sm sm:text-base">
             <p className="text-[#b4acac] hover:text-[#ee3138] transition-colors duration-300 font-medium">
                 <a href="#titles">Titles</a>
             </p>
@@ -11,7 +11,6 @@ export default function FooterLinks() {
             <p className="text-[#b4acac] hover:text-[#ee3138] transition-colors duration-300 font-medium">
                 <a href="#press" className="">Press</a>
             </p>
-
         </div>
     )
 }

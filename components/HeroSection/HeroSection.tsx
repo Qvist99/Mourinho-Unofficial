@@ -1,11 +1,19 @@
 import HeroTextContent from "./HeroTextContent"
 import HeroFooter from "./HeroFooter"
-
+import Section from "../Section"
 export default function HeroSection() {
     return (
-        <section
+        <Section
+            variant="hero"
             id="hero"
-            className="flex justify-center items-center min-h-screen bg-position-[0%_60%] bg-no-repeat bg-cover"
+            className="
+            flex 
+            justify-center 
+            items-center 
+            min-h-screen 
+            bg-position-[10%_60%] 
+            bg-no-repeat bg-cover
+            "
             style={{ backgroundImage: 'url(/JoseHero.jpg)' }}
         >
             {/* Overlay */}
@@ -13,12 +21,21 @@ export default function HeroSection() {
 
 
             {/* Content */}
-            <div className="flex flex-col justify-center items-center z-30 w-full min-h-screen p-10">
+            <div className="
+                flex 
+                flex-col 
+                justify-center 
+                items-center 
+                z-30 
+                w-full 
+                min-h-screen 
+            "
+            >
                 <HeroTextContent />
                 <HeroFooter />
             </div>
 
-        </section>
+        </Section>
     )
 }
 
