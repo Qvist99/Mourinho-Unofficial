@@ -6,4 +6,4 @@ If returning to this project, consider addressing the following:
 - Find better looking font
 - Functional language change
 - Functional Load More and potentially View All button in Press section
-- Smooth scrolling on footer items and nav signature ]
+- Smooth scrolling on footer items and nav signature
