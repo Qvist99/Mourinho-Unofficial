@@ -11,7 +11,7 @@ export default function HeroSection() {
             flex 
             justify-center 
             items-center 
-            min-h-svh 
+            min-h-dvh 
             bg-position-[10%_60%] 
             bg-no-repeat bg-cover
             "
