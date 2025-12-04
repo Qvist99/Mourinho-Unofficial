@@ -8,15 +8,26 @@ export default function HeroSection() {
             variant="hero"
             id="hero"
             className="
+            relative
             flex 
             justify-center 
             items-center 
-            min-h-dvh 
-            bg-position-[10%_60%] 
-            bg-no-repeat bg-cover
+            min-h-screen 
             "
-            style={{ backgroundImage: 'url(/JoseHero.jpg)' }}
         >
+
+            <img
+                src="/JoseHero.jpg"
+                className="
+            absolute inset-0
+            w-full h-full
+            object-cover
+            object-[10%_60%]
+        "
+                alt=""
+            />
+
+
             {/* Overlay */}
             <div className="absolute inset-0 bg-black opacity-40" ></div>
 
