@@ -12,22 +12,13 @@ export default function HeroSection() {
             flex 
             justify-center 
             items-center 
-            min-h-screen 
+            min-h-[86vh]
+            sm:min-h-screen 
+            bg-position-[10%_60%] 
+            bg-no-repeat bg-cover
             "
+            style={{ backgroundImage: 'url(/JoseHero.jpg)' }}
         >
-
-            <img
-                src="/JoseHero.jpg"
-                className="
-            absolute inset-0
-            w-full h-full
-            object-cover
-            object-[10%_60%]
-        "
-                alt=""
-            />
-
-
             {/* Overlay */}
             <div className="absolute inset-0 bg-black opacity-40" ></div>
 
@@ -39,8 +30,7 @@ export default function HeroSection() {
                 justify-center 
                 items-center 
                 z-30 
-                w-full 
-                min-h-screen 
+                w-full
             "
             >
                 <Parallax speed={-10}>
