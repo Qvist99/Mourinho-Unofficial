@@ -1,4 +1,4 @@
-[## Future Improvements
+## Future Improvements
 
 If returning to this project, consider addressing the following:
 
