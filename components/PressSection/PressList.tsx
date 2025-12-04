@@ -1,4 +1,5 @@
 import PressItem from "./PressItem";
+import { motion, easeOut } from "motion/react";
 export default function PressList() {
 
     const pressItems = [
@@ -22,15 +23,25 @@ export default function PressList() {
         }
     ];
 
-
-
     return (
-        <div className="mt-12">
+        <motion.div
+            className="mt-12"
+        >
             {pressItems.map((item, index) => (
-                <PressItem
+                <motion.div
                     key={index}
-                    item={item}
-                />
+                    initial={{ opacity: 0, y: 80 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 1, ease: easeOut }}
+
+                >
+
+                    <PressItem
+                        key={index}
+                        item={item}
+                    />
+                </motion.div>
             ))}
 
             <div className="
@@ -44,6 +55,6 @@ export default function PressList() {
                 <button className="bg-[#efedea] py-2 px-4 font-bold rounded-md cursor-pointer hover:bg-[#ed1c24] hover:text-white transition-all duration-300">View All</button>
             </div>
 
-        </div>
+        </motion.div>
     )
 }

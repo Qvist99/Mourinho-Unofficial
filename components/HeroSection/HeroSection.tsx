@@ -1,6 +1,7 @@
 import HeroTextContent from "./HeroTextContent"
 import HeroFooter from "./HeroFooter"
 import Section from "../Section"
+import { Parallax } from "react-scroll-parallax"
 export default function HeroSection() {
     return (
         <Section
@@ -31,7 +32,9 @@ export default function HeroSection() {
                 min-h-screen 
             "
             >
-                <HeroTextContent />
+                <Parallax speed={-10}>
+                    <HeroTextContent />
+                </Parallax>
                 <HeroFooter />
             </div>
 

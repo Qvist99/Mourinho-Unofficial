@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 import { useState } from "react"
 import { timelineItems } from "@/lib/timelineItems"
 import { useWindowWidth } from "@/lib/useWindowWidth"
+import { motion } from "motion/react"
 
 export default function Timeline() {
     const width = useWindowWidth();
@@ -29,7 +30,13 @@ export default function Timeline() {
     }
 
     return (
-        <div className="overflow-x-hidden relative w-full">
+        <motion.div
+            initial={{ opacity: 0, y: 150 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7, ease: "backOut" }}
+
+            className="overflow-x-hidden relative w-full">
             {/* Control buttons */}
             <div className="absolute flex gap-2 z-50 top-8">
                 <button
@@ -109,7 +116,7 @@ export default function Timeline() {
                     </div>
                 ))}
             </div>
-        </div>
+        </motion.div>
 
     )
 }

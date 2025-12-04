@@ -1,4 +1,4 @@
-
+import { motion } from "motion/react"
 export default function HeroTextContent() {
     return (
         <div className="
@@ -7,26 +7,38 @@ export default function HeroTextContent() {
             leading-none sm:leading-13 md:leading-17 lg:leading-19 xl:leading-20
         "
         >
-            <span className="
-            text-[#FFD400] 
-            text-[2rem] md:text-[2.5rem]
-            xl:text-[2.5rem]
-            "
-            >
-                JOSÉ
-            </span>
-            <span className="
-                outlined-text 
-                font-bold 
-                -ml-0.5 sm:-ml-1 xl:-ml-1.75
-                text-shadow-[0_0_100px_rgba(0,0,0,0.4)]
-                text-[3rem] sm:text-[5rem] md:text-[7rem] lg:text-[8.5rem] xl:text-[9.2rem]
-            "
-            >
-                MOURINHO
-            </span>
+            <motion.div
+                initial={{ opacity: 0, y: -60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
 
-            <div className="text-right mr-2 ">
+                className="flex flex-col">
+
+                <span className="
+                text-[#FFD400] 
+                text-[2rem] md:text-[2.5rem]
+                xl:text-[2.5rem]
+            "
+                >
+                    JOSÉ
+                </span>
+                <span className="
+                    outlined-text 
+                    font-bold 
+                    -ml-0.5 sm:-ml-1 xl:-ml-1.75
+                    text-shadow-[0_0_100px_rgba(0,0,0,0.4)]
+                    text-[3rem] sm:text-[5rem] md:text-[7rem] lg:text-[8.5rem] xl:text-[9.2rem]
+                "
+                >
+                    MOURINHO
+                </span>
+            </motion.div>
+
+            <motion.div
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, }}
+                className="text-right mr-2 ">
                 <span className="
                     text-white
                     font-bold sm:font-normal
@@ -36,7 +48,7 @@ export default function HeroTextContent() {
                 >
                     THE SPECIAL ONE
                 </span>
-            </div>
+            </motion.div>
         </div>
     )
 }

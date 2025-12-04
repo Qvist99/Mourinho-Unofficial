@@ -42,7 +42,6 @@ export default function TrophyDisplay() {
         flex-col 
         items-start 
         gap-5 
-        sm:w-1/3
         "
         >
 
