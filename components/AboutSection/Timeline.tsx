@@ -84,7 +84,7 @@ export default function Timeline() {
                         {/* The card content */}
                         <div className="relative group-hover:bg-[#F2F2F2] rounded-md px-[15px] py-1 w-full">
                             {/* upwards indicator */}
-                            <div className="absolute bg-[#F2F2F2] w-3.5 h-3.5 transform -translate-1/2 rotate-45 left-1/2 opacity-0 group-hover:opacity-100"></div>
+                            <div className="absolute bg-[#F2F2F2] w-4.5 h-4.5 transform -translate-1/2 rotate-45 left-1/2 opacity-0 group-hover:opacity-100"></div>
 
                             <div>
                                 <img src={item.teamSvgUrl} alt={item.teamName} className="w-20 h-20 object-contain" />
